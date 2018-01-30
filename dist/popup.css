@@ -1,0 +1,122 @@
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: table; }
+
+.popup .checkbox {
+  position: relative;
+  top: -0.375rem;
+  margin: 0 1rem 0 0;
+  cursor: pointer;
+  width: auto;
+  outline: none; }
+  .popup .checkbox:before {
+    transition: all 0.3s ease-in-out;
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    width: 1.3rem;
+    height: 1.3rem;
+    border: 2px solid #ddd; }
+  .popup .checkbox:checked:before {
+    transform: rotate(-45deg);
+    height: .65rem;
+    border-color: #EE4D00;
+    border-top-style: none;
+    border-right-style: none; }
+  .popup .checkbox:after {
+    content: "";
+    position: absolute;
+    top: -0.125rem;
+    left: 0;
+    width: 1.4rem;
+    height: 1.4rem;
+    background: #F6F6F6;
+    cursor: pointer; }
+
+.call-popup {
+  color: #EE4D00; }
+  .call-popup.enabled {
+    cursor: pointer; }
+  .call-popup i {
+    vertical-align: top; }
+
+.popup-overlay {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.35);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1; }
+
+.popup {
+  position: relative;
+  background: white;
+  box-shadow: 0 7px 12px -5px rgba(0, 0, 0, 0.16);
+  transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+  left: 50%;
+  width: 500px; }
+  .popup .popup-header {
+    line-height: 64px;
+    padding: 0 15px;
+    font-size: 1.3rem; }
+    .popup .popup-header .material-icons {
+      line-height: 64px; }
+    .popup .popup-header .popup-logo {
+      display: inline-block;
+      width: 36px;
+      margin-right: 10px; }
+    .popup .popup-header .popup-close {
+      float: right;
+      font-size: 40px;
+      opacity: .7;
+      cursor: pointer; }
+  .popup .popup-body {
+    background: #F6F6F6;
+    padding: 15px; }
+    .popup .popup-body p {
+      margin: 0; }
+  .popup .email-block {
+    background: #fff;
+    border: 1px solid #E4E4E4;
+    padding: 5px 0 0;
+    margin: 15px 0; }
+    .popup .email-block label {
+      font-size: 1.2rem;
+      display: block;
+      padding: 0 15px 5px; }
+    .popup .email-block input {
+      font-size: 1rem; }
+      .popup .email-block input::placeholder {
+        font-style: italic;
+        opacity: 0.7; }
+  .popup .popup-confirm {
+    display: block;
+    width: 100%;
+    background: #EE4D00;
+    border: 0 none;
+    line-height: 95px;
+    color: #fff;
+    font-size: 2rem; }
+
+@media (max-width: 550px) {
+  .popup {
+    width: 90%; }
+    .popup .popup-header {
+      line-height: 48px;
+      padding: 0 15px;
+      font-size: 1.1rem; }
+      .popup .popup-header .material-icons {
+        line-height: 48px;
+        font-size: 28px; }
+    .popup .popup-body {
+      font-size: .9rem; }
+    .popup .email-block label {
+      font-size: 1rem; }
+    .popup .popup-confirm {
+      line-height: 70px;
+      font-size: 1.5rem; } }

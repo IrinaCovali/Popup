@@ -1,0 +1,29 @@
+@media(max-width: 550px) {
+  .popup {
+    width: 90%;
+    .popup-header {
+      line-height: 48px;
+      padding: 0 15px;
+      font-size: 1.1rem;
+      .material-icons {
+        line-height: 48px;
+        font-size: 28px;
+      }
+    }
+
+    .popup-body {
+      font-size: .9rem;
+    }
+
+    .email-block {
+      label {
+        font-size: 1rem;
+      }      
+    }
+
+    .popup-confirm {
+      line-height: 70px;
+      font-size: 1.5rem;
+    }
+  }
+}
